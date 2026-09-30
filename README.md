@@ -6,12 +6,14 @@
 
 ━━━━━━━━━━━━━━━━━━━━━━
 
-🔐 Secrets 配置说明
+🔐 Secrets 配置说明(在原作基础上增加第2账号的保活支持，优化了签到方式防黑号)
 
 | Secret 名称         | 是否必填 | 说明                                              |
 |---------------------|----------|---------------------------------------------------|
-| LUNES_EMAIL     | ✅ 必填  | lunes 登录邮箱                                    |
-| LUNES_PASSWORD  | ✅ 必填  | lunes 登录密码                                    | 
+| LUNES_EMAIL     | ✅ 必填  | lunes 登录邮箱1                                   |
+| LUNES_PASSWORD  | ✅ 必填  | lunes 登录密码1                                   | 
+| LUNES_EMAIL1     | ❌ 可选  | lunes 登录邮箱2                                   |
+| LUNES_PASSWORD1  | ✅❌ 可选   | lunes 登录密码2                                  | 
 | NODE_LINK       | ❌ 可选  | 代理链接，如 vless:// vmess:// tuic:// hysteria2:// anttls:// socks5://|
 | TG_BOT_TOKEN    | ❌ 可选  | Telegram Bot Token（用于发送通知）                     |
 | TG_CHAT_ID      | ❌ 可选  | Telegram Chat ID（接收通知的用户或群组 ID）              |
