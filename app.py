@@ -6,6 +6,7 @@ import time
 import subprocess
 import requests
 import re
+import random
 from seleniumbase import SB
 
 # 从环境变量获取账号密码和 TG 配置
@@ -429,10 +430,15 @@ def main():
 
     # 🆕 新增：逐账号执行（各自独立浏览器会话），末尾汇总结果
     results = []
-    for acc in ACCOUNTS:
+    for idx, acc in enumerate(ACCOUNTS):
         ok = run_account(sb_kwargs, acc)
         results.append((acc["name"], ok))
-        time.sleep(3)   # 账号间稍作间隔，等浏览器进程干净退出
+        if idx < len(ACCOUNTS) - 1:
+            # 🆕 修改：账号间由固定 3 秒改为随机 1~3 分钟，模拟真人操作间隔，降低黑号风险
+            #          （推送在 run_account 内已完成，此处等待后再执行下一账号）
+            wait_seconds = random.randint(60, 180)
+            print(f"\n⏳ 随机等待 {wait_seconds} 秒（约 {wait_seconds / 60:.1f} 分钟）后执行下一账号，避免多账号行为过于规律...")
+            time.sleep(wait_seconds)
 
     print("\n" + "=" * 40)
     print("📊 全部账号执行完毕：")
