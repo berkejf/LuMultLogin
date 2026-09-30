@@ -2,7 +2,7 @@ name: Auto-login-Lunes
 on:
   workflow_dispatch:
   schedule:
-    - cron: '4 6 */10 * *'
+    - cron: '4 6 5,15,25 * *'
 
 jobs:
   Renew-lunes:
@@ -37,6 +37,8 @@ jobs:
         env:
           LUNES_EMAIL: ${{ secrets.LUNES_EMAIL }}
           LUNES_PASSWORD: ${{ secrets.LUNES_PASSWORD }}
+          LUNES_EMAIL1: ${{ secrets.LUNES_EMAIL1 }}
+          LUNES_PASSWORD1: ${{ secrets.LUNES_PASSWORD1 }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
           TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
         run: |
