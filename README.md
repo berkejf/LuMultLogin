@@ -10,9 +10,9 @@
 
 | Secret 名称         | 是否必填 | 说明                                              |
 |---------------------|----------|---------------------------------------------------|
-| LUNES_EMAIL     | ✅ 必填  | lunes 登录邮箱1                                   |
+| LUNES_EMAIL     | ✅ 必填  | lunes 登录邮箱1🇺🇸                                 |
 | LUNES_PASSWORD  | ✅ 必填  | lunes 登录密码1                                   | 
-| LUNES_EMAIL1     | ❌ 可选  | lunes 登录邮箱2                                   |
+| LUNES_EMAIL1     | ❌ 可选  | lunes 登录邮箱2🇩🇪                                |
 | LUNES_PASSWORD1  | ❌ 可选   | lunes 登录密码2                                  | 
 | NODE_LINK       | ❌ 可选  | 代理链接，如 vless:// vmess:// tuic:// hysteria2:// anttls:// socks5://|
 | TG_BOT_TOKEN    | ❌ 可选  | Telegram Bot Token（用于发送通知）                     |
